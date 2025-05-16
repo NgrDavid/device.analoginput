@@ -12,7 +12,7 @@ env:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   DOTNET_GENERATE_ASPNET_CERTIFICATE: false
   ContinuousIntegrationBuild: true
-  CiBuildVersion: ${{github.event.release.tag_name || '42.42.42'}}
+  CiBuildVersion: ${{github.event.release.tag_name || 'if42.42.42'}}
 jobs:
   build:
     strategy:
