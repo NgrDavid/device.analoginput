@@ -6,6 +6,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(ContinuousIntegrationBuild)' == 'true'">
     <Version Condition="$(CiBuildVersion.StartsWith('api'))">$(CiBuildVersion.Substring(3))</Version>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
   <Target Name="VersionSanityChecks" BeforeTargets="build;restore">
     <Error Condition="'$(ContinuousIntegrationBuild)' == 'true' and '$(CiBuildVersion)' == ''" Text="CI version info not configured." />
