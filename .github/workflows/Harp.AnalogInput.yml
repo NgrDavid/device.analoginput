@@ -24,7 +24,7 @@ jobs:
             collect-packages: true
     name: Build
     runs-on: windows-latest
-    if: github.event_name != 'release' || startsWith('refs/tags/api', github.event.release.tag_name)
+    if: github.event_name != 'release' || startsWith('api', github.event.release.tag_name)
     steps:
       # ----------------------------------------------------------------------- Checkout
       - name: Checkout
